@@ -1,5 +1,7 @@
 package com.exampleebook1.springboot.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.*;
@@ -8,6 +10,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "TB_PRODUTO")
+@Data
 public class ProdutoModel extends RepresentationModel<ProdutoModel> implements Serializable {
     private static final long serialVersionUID =1L;
 
@@ -19,7 +22,7 @@ public class ProdutoModel extends RepresentationModel<ProdutoModel> implements S
     @Column
     private BigDecimal valor;
 
-    public Long getId() {
+   /* public Long getId() {
         return id;
     }
 
@@ -41,5 +44,5 @@ public class ProdutoModel extends RepresentationModel<ProdutoModel> implements S
 
     public void setValor(BigDecimal valor) {
         this.valor = valor;
-    }
+    }*/
 }
